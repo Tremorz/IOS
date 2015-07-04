@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import <UIKit/UIKit.h>
 
 @interface NHIViewController : UITableViewController
 

@@ -21,5 +21,7 @@ enum notice_type {need, have, info};
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 
 -(float)distanceFrom:(CLLocation*)location;
+-(UIColor*)backgroundColor;
+-(MKPinAnnotationColor)pinColor;
 
 @end

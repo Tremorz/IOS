@@ -61,6 +61,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dCP-rj-oiN">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="notice_cell" textLabel="R7a-eT-iAI" detailTextLabel="b6q-2a-fpm" style="IBUITableViewCellStyleSubtitle" id="hwD-RN-dy2">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -92,29 +93,85 @@
                         <connections>
                             <outlet property="dataSource" destination="FbR-e5-QMY" id="i2i-Um-2ir"/>
                             <outlet property="delegate" destination="FbR-e5-QMY" id="1QT-fS-H4d"/>
+                            <outletCollection property="gestureRecognizers" destination="SM5-4H-tYZ" appends="YES" id="tsS-eZ-RES"/>
                         </connections>
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdF-uY-DHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SM5-4H-tYZ">
+                    <connections>
+                        <segue destination="jyO-dK-JP3" kind="show" id="B07-sv-IAn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1755" y="1118"/>
         </scene>
         <!--Detail-->
         <scene sceneID="ct8-Jk-QEv">
             <objects>
-                <viewController title="Detail" id="jyO-dK-JP3" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" title="Detail" id="jyO-dK-JP3" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DkH-bt-JKB"/>
-                        <viewControllerLayoutGuide type="bottom" id="FLf-8B-dvQ"/>
+                        <viewControllerLayoutGuide type="top" id="g4Z-Er-gU1"/>
+                        <viewControllerLayoutGuide type="bottom" id="6wI-lF-fo8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bX7-4o-biw">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="OoB-kT-BY3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-tO-Chc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="289" width="286" height="263"/>
+                                </variation>
+                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6s3-5c-UVn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="158" width="286" height="104"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="W12-CR-xh0">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="78" width="277" height="58"/>
+                                </variation>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hPv-tO-Chc"/>
+                                <exclude reference="6s3-5c-UVn"/>
+                                <exclude reference="W12-CR-xh0"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="hPv-tO-Chc"/>
+                                <include reference="6s3-5c-UVn"/>
+                                <include reference="W12-CR-xh0"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="detailView" destination="6s3-5c-UVn" id="cnG-W6-zPE"/>
+                        <outlet property="mapView" destination="hPv-tO-Chc" id="eWL-3b-Ojl"/>
+                        <outlet property="titleView" destination="W12-CR-xh0" id="Ify-N3-oJX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3f-2Y-rLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2536.5" y="1118"/>
+            <point key="canvasLocation" x="2535.75" y="1117.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="suY-8E-MYF">
