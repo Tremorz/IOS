@@ -1,5 +1,5 @@
 //
-//  NHIViewController.h
+//  NHICell.h
 //  tremors
 //
 //  Created by David Preece on 4/07/15.
@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
+#import <UIKit/UIKit.h>
 
-@interface NHIViewController : UITableViewController
-
-@property CLLocationCoordinate2D location;
+@interface NHICell : UITableViewCell
 
 @end

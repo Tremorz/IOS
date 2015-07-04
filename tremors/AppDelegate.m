@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "Notice.h"
 
+AppDelegate* ad() {
+    return (AppDelegate*)[UIApplication sharedApplication].delegate;
+}
+
 @interface AppDelegate ()
 
 @end
