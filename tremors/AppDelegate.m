@@ -23,17 +23,32 @@ AppDelegate* ad() {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.notices=[[NSMutableArray alloc] init];
-
     Notice* incoming;
+    
     incoming = [[Notice alloc] init];
-    incoming.title = @"A thing";
+    incoming.title = @"Are chickens helpful?";
+    incoming.type = have;
+    incoming.meta=@"4 July 2013, 3.5km away";
+    incoming.details=@"I've got me some chickens, if you need chickens. They lay well :)";
+    incoming.coordinate=CLLocationCoordinate2DMake(-41.295967, 174.787468);
     [self.notices addObject:incoming];
+    
     incoming = [[Notice alloc] init];
-    incoming.title = @"Another thing";
+    incoming.title = @"Ow! Ow! Ow!";
+    incoming.type = need;
+    incoming.meta=@"4 July 2013, 6km away";
+    incoming.details=@"My leg's fallen off. I have to bite their ankles.";
+    incoming.coordinate=CLLocationCoordinate2DMake(-41.306203, 174.778648);
     [self.notices addObject:incoming];
+    
     incoming = [[Notice alloc] init];
-    incoming.title = @"A third thing";
+    incoming.title = @"From the department of highways";
+    incoming.type= info;
+    incoming.meta=@"4 July 2013, 8km away";
+    incoming.details=@"A truck has dropped it's load, as it were";
+    incoming.coordinate=CLLocationCoordinate2DMake(-41.298491, 174.777388);
     [self.notices addObject:incoming];
+    
     return YES;
 }
 

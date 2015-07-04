@@ -7,9 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-@interface Notice : NSObject
+enum notice_type {need, have, info};
 
-@property NSString* title;
+
+@interface Notice : NSObject<MKAnnotation>
+
+@property enum notice_type type;
+@property (nonatomic, copy) NSString* title;
+@property NSString* meta;
+@property NSString* details;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
+
 
 @end
