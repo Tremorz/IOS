@@ -24,7 +24,6 @@
     self.map.delegate=self;
     
     //set up the map
-    self.map.showsUserLocation=true;
     self.map.zoomEnabled=true;
     self.map.rotateEnabled=false;
     self.map.visibleMapRect=MKMapRectMake(264512480, 168016434, 93891, 118302);
@@ -46,7 +45,8 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     CGPoint tapped_point=[(UITapGestureRecognizer*)sender locationInView:self.map];
-    ((NHIViewController*)segue.destinationViewController).location=[self.map convertPoint:tapped_point toCoordinateFromView:self.map];
+    CLLocationCoordinate2D coord=[self.map convertPoint:tapped_point toCoordinateFromView:self.map];
+    ((NHIViewController*)segue.destinationViewController).location=[[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
 }
 
 @end

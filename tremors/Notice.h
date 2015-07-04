@@ -20,5 +20,6 @@ enum notice_type {need, have, info};
 @property NSString* details;
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 
+-(float)distanceFrom:(CLLocation*)location;
 
 @end

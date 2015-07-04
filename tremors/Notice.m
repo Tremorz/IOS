@@ -7,8 +7,14 @@
 //
 
 #import "Notice.h"
+#import <CoreLocation/CoreLocation.h>
 
 @implementation Notice
 
+-(float)distanceFrom:(CLLocation*)location
+{
+    CLLocation* my_location=[[CLLocation alloc] initWithLatitude:_coordinate.latitude longitude:_coordinate.longitude];
+    return [my_location distanceFromLocation:location];
+}
 
 @end

@@ -11,6 +11,7 @@
 
 @interface NHIViewController : UITableViewController
 
-@property CLLocationCoordinate2D location;
+@property NSArray* sorted; //by distance from location, when the controller is created
+@property CLLocation* location; //set by the map view before this appears
 
 @end
