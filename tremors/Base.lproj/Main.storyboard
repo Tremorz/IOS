@@ -7,7 +7,7 @@
         <!--Needs/Helps/Info-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Needs/Helps/Info" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Needs/Helps/Info" id="vXZ-lx-hvc" customClass="NHIViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -21,6 +21,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="64" width="400" height="536"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="l9S-e3-a2L"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -36,10 +39,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Needs/Helps/Info" id="auy-Xx-PEK"/>
+                    <connections>
+                        <outlet property="map" destination="6qb-Pl-kLu" id="WKV-ac-M6o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="547"/>
+            <point key="canvasLocation" x="978" y="486"/>
         </scene>
         <!--Needs/Helps/Info Controller-->
         <scene sceneID="suY-8E-MYF">

@@ -22,8 +22,7 @@
                             <exclude reference="nZd-1a-Og8"/>
                         </mask>
                     </variation>
-                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                        <rect key="frame" x="80" y="63" width="128" height="128"/>
+                    <variation key="widthClass=compact">
                         <mask key="constraints">
                             <include reference="Xio-XN-cf9"/>
                             <include reference="nZd-1a-Og8"/>
@@ -33,8 +32,8 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Cv1-1q-kZJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="PEv-7d-9lT"/>
-                <constraint firstAttribute="trailing" secondItem="Cv1-1q-kZJ" secondAttribute="trailing" constant="20" symbolic="YES" id="f8p-WJ-aZL"/>
+                <constraint firstItem="Cv1-1q-kZJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="63" id="aTV-Gh-cWS"/>
+                <constraint firstItem="Cv1-1q-kZJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gw0-1u-d56"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -43,8 +42,7 @@
                     <exclude reference="Cv1-1q-kZJ"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="PEv-7d-9lT"/>
-                    <exclude reference="f8p-WJ-aZL"/>
+                    <exclude reference="gw0-1u-d56"/>
                 </mask>
             </variation>
             <variation key="widthClass=compact">
@@ -52,11 +50,11 @@
                     <include reference="Cv1-1q-kZJ"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="PEv-7d-9lT"/>
-                    <include reference="f8p-WJ-aZL"/>
+                    <include reference="aTV-Gh-cWS"/>
+                    <include reference="gw0-1u-d56"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="452.5" y="492.5"/>
+            <point key="canvasLocation" x="473.5" y="511"/>
         </view>
     </objects>
     <resources>

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Notice.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.notices=[[NSMutableArray alloc] init];
+
+    Notice* incoming;
+    incoming = [[Notice alloc] init];
+    incoming.title = @"A thing";
+    [self.notices addObject:incoming];
+    incoming = [[Notice alloc] init];
+    incoming.title = @"Another thing";
+    [self.notices addObject:incoming];
+    incoming = [[Notice alloc] init];
+    incoming.title = @"A third thing";
+    [self.notices addObject:incoming];
     return YES;
 }
 
