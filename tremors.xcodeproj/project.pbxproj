@@ -17,6 +17,7 @@
 		E11B3B951B47C662000860CD /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = E11B3B941B47C662000860CD /* Notice.m */; };
 		E11B3B981B47D8D3000860CD /* NHIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11B3B971B47D8D3000860CD /* NHIViewController.m */; };
 		E11B3B9F1B488D3A000860CD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11B3B9E1B488D3A000860CD /* DetailViewController.m */; };
+		E1D475BA1B48C86300FB57B4 /* server_reply.json in Resources */ = {isa = PBXBuildFile; fileRef = E1D475B91B48C86300FB57B4 /* server_reply.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		E11B3B971B47D8D3000860CD /* NHIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHIViewController.m; sourceTree = "<group>"; };
 		E11B3B9D1B488D3A000860CD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		E11B3B9E1B488D3A000860CD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E1D475B91B48C86300FB57B4 /* server_reply.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = server_reply.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				E11B3B751B47BF6F000860CD /* Images.xcassets */,
 				E11B3B771B47BF6F000860CD /* LaunchScreen.xib */,
 				E11B3B681B47BF6F000860CD /* Supporting Files */,
+				E1D475B91B48C86300FB57B4 /* server_reply.json */,
 			);
 			path = tremors;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				E11B3B741B47BF6F000860CD /* Main.storyboard in Resources */,
 				E11B3B791B47BF6F000860CD /* LaunchScreen.xib in Resources */,
 				E11B3B761B47BF6F000860CD /* Images.xcassets in Resources */,
+				E1D475BA1B48C86300FB57B4 /* server_reply.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

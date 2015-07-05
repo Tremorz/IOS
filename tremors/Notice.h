@@ -16,7 +16,6 @@ enum notice_type {need, have, info};
 
 @property enum notice_type type;
 @property (nonatomic, copy) NSString* title;
-@property NSString* meta;
 @property NSString* details;
 @property (nonatomic) CLLocationCoordinate2D coordinate;
 

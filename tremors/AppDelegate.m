@@ -8,14 +8,17 @@
 
 #import "AppDelegate.h"
 #import "Notice.h"
+#import <Foundation/Foundation.h>
 
 AppDelegate* ad() {
     return (AppDelegate*)[UIApplication sharedApplication].delegate;
 }
 
+
 @interface AppDelegate ()
 
 @end
+
 
 @implementation AppDelegate
 
@@ -23,7 +26,7 @@ AppDelegate* ad() {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.notices=[[NSMutableArray alloc] init];
-    Notice* incoming;
+/*    Notice* incoming;
     
     incoming = [[Notice alloc] init];
     incoming.title = @"Are chickens helpful?";
@@ -47,8 +50,24 @@ AppDelegate* ad() {
     incoming.meta=@"4 July 2013, 8km away";
     incoming.details=@"A truck has dropped it's load, as it were";
     incoming.coordinate=CLLocationCoordinate2DMake(-41.298491, 174.777388);
-    [self.notices addObject:incoming];
+    [self.notices addObject:incoming];*/
     
+    NSString* path=[[NSBundle mainBundle] pathForResource:@"server_reply" ofType:@"json"];
+    NSData* server_reply=[NSData dataWithContentsOfFile:path];
+    NSDictionary* json=[NSJSONSerialization JSONObjectWithData:server_reply options:0 error:nil];
+    NSDictionary* meat=json[@"Rows"];
+    for (id incoming in meat) {
+        Notice* new_notice=[[Notice alloc] init];
+        new_notice.title=incoming[@"Title"];
+        NSString* type=incoming[@"Type"];
+        new_notice.type=info;
+        if ([type isEqual:@"N"]) new_notice.type=need;
+        if ([type isEqual:@"S"]) new_notice.type=have;
+        new_notice.details=incoming[@"Description"];
+        new_notice.coordinate=CLLocationCoordinate2DMake([incoming[@"Lat"] floatValue], [incoming[@"Lon"] floatValue]);
+        [_notices addObject:new_notice];
+    }
+
     return YES;
 }
 
