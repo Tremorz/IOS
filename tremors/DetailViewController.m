@@ -16,6 +16,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     _titleView.text=_notice.title;
+    _titleView.backgroundColor=_notice.backgroundColor;
     _detailView.text=_notice.details;
     MKCoordinateRegion cr=MKCoordinateRegionMake(_notice.coordinate, MKCoordinateSpanMake(0.002, 0.002));
     [_mapView setRegion:cr];
