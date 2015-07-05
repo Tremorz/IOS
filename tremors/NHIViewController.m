@@ -46,8 +46,9 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    Notice* clicked_notice=_sorted[self.tableView.indexPathForSelectedRow.row];
-    ((DetailViewController*)segue.destinationViewController).notice=clicked_notice;
+    CGPoint tapped=[((UIGestureRecognizer*)sender) locationInView:self.view];
+    Notice* tapped_notice=_sorted[[self.tableView indexPathForRowAtPoint:tapped].row];
+    ((DetailViewController*)segue.destinationViewController).notice=tapped_notice;
 }
 
 

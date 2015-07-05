@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="188" height="472"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tremors" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-1q-kZJ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iHelp" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-1q-kZJ">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="Xio-XN-cf9"/>
@@ -22,7 +22,8 @@
                             <exclude reference="nZd-1a-Og8"/>
                         </mask>
                     </variation>
-                    <variation key="widthClass=compact">
+                    <variation key="widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="8" y="63" width="172" height="161"/>
                         <mask key="constraints">
                             <include reference="Xio-XN-cf9"/>
                             <include reference="nZd-1a-Og8"/>
@@ -54,10 +55,10 @@
                     <include reference="gw0-1u-d56"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="473.5" y="511"/>
+            <point key="canvasLocation" x="473" y="511"/>
         </view>
     </objects>
     <resources>
-        <image name="tremors" width="100" height="88"/>
+        <image name="iHelp" width="990" height="990"/>
     </resources>
 </document>
